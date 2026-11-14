@@ -1,0 +1,71 @@
+{
+    "project": "PolicyBazaar Analytics",
+    "analysis": "Week 6 RFM and K-Means",
+    "observation_date": "2026-06-29",
+    "total_customers": 200,
+    "eligible_customers": 200,
+    "excluded_customers": 0,
+    "observation_scope": "Supplied sample sales data; not verified insurance policy data.",
+    "monetary_definition": "Discounted value of non-returned transactions.",
+    "frequency_definition": "Distinct non-returned sales transaction count.",
+    "recency_definition": "Days since latest non-returned transaction.",
+    "requested_cluster_count": 5,
+    "five_cluster_silhouette": {
+        "k": 5,
+        "inertia": 221.51694315139645,
+        "silhouette_score": 0.31791689623040964,
+        "silhouette_pct": 31.791689623040963
+    },
+    "best_tested_model": {
+        "k": 2,
+        "inertia": 416.409049924548,
+        "silhouette_score": 0.3476926469880031,
+        "silhouette_pct": 34.76926469880031
+    },
+    "acceptance_target_silhouette_pct": 85,
+    "target_met": false,
+    "cluster_evaluations": [
+        {
+            "k": 2,
+            "inertia": 416.409049924548,
+            "silhouette_score": 0.3476926469880031,
+            "silhouette_pct": 34.76926469880031
+        },
+        {
+            "k": 3,
+            "inertia": 319.88373193982966,
+            "silhouette_score": 0.29154104466925757,
+            "silhouette_pct": 29.154104466925755
+        },
+        {
+            "k": 4,
+            "inertia": 265.6311723219814,
+            "silhouette_score": 0.28373407204188544,
+            "silhouette_pct": 28.373407204188545
+        },
+        {
+            "k": 5,
+            "inertia": 221.51694315139645,
+            "silhouette_score": 0.31791689623040964,
+            "silhouette_pct": 31.791689623040963
+        },
+        {
+            "k": 6,
+            "inertia": 191.97148122733046,
+            "silhouette_score": 0.31270650279144335,
+            "silhouette_pct": 31.270650279144334
+        },
+        {
+            "k": 7,
+            "inertia": 165.06634693911144,
+            "silhouette_score": 0.32170767370936104,
+            "silhouette_pct": 32.170767370936105
+        },
+        {
+            "k": 8,
+            "inertia": 143.89199689747932,
+            "silhouette_score": 0.33738918628101006,
+            "silhouette_pct": 33.738918628101004
+        }
+    ]
+}
