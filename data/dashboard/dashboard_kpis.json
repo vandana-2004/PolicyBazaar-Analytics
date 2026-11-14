@@ -1,0 +1,10 @@
+{
+  "total_customers": 200,
+  "sales_transactions": 1000,
+  "valid_transactions": 903,
+  "observed_sales_inr": 7200464.2,
+  "average_observed_sales_per_customer_inr": 36002.32,
+  "churned_customers": 6,
+  "average_frequency": 4.51,
+  "average_recency_days": 146.91
+}
