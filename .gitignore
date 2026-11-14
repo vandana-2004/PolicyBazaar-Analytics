@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+.venv-*/
+
+# Secrets and environment files
+.env
+.env.*
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Raw source data - keep local
+data/raw/*.csv
+
+# Duplicate submission archive
+PolicyBazaar_Week1_Submission.zip

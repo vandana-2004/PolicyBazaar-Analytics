@@ -1,0 +1,36 @@
+{
+    "project": "PolicyBazaar Analytics",
+    "scope": "Initial baseline; supplied sample data only",
+    "customers": {
+        "customer_count": 200,
+        "average_profile_revenue_inr": 24963.1,
+        "average_profile_orders": 11.54,
+        "churned_customers": 6,
+        "churn_rate_pct": 3.0
+    },
+    "sales": {
+        "transaction_count": 1000,
+        "gross_recorded_sales_inr": 8456050.0,
+        "sales_after_discount_inr": 8021851.2,
+        "returned_records": 97,
+        "non_returned_records": 903,
+        "non_returned_sales_after_discount_inr": 7200464.2
+    },
+    "fintech": {
+        "transaction_count": 800,
+        "status_counts": {
+            "Failed": 161,
+            "Pending": 162,
+            "Success": 477
+        },
+        "successful_amount_inr": 11685052.83,
+        "fraud_flagged_records": 25,
+        "successful_fraud_flagged_records": 14
+    },
+    "limitations": [
+        "Only 200 customer profiles supplied, not the 50,000 target.",
+        "Fintech user IDs have no verified mapping to Customer_ID.",
+        "Sales data is not confirmed as insurance-policy revenue.",
+        "These baselines are not validated insurance CLV metrics."
+    ]
+}
