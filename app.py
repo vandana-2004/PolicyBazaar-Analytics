@@ -16,10 +16,11 @@ st.title("PolicyBazaar Customer Analytics")
 st.caption("Week 9 | Aggregate Dashboard v1")
 
 st.warning(
-    "Sample-data disclosure: 200 customer profiles and general retail "
-    "sales transactions. This is not a verified 50,000-policyholder "
-    "insurance dataset. Sales are not insurance premiums, commissions, "
-    "or predicted customer lifetime value."
+    "Cynaris-confirmed project sample: 200 customer profiles and 1,000 "
+    "sales transactions. Transaction values, product categories and "
+    "customer segments are exploratory proxies for insurance-relevant "
+    "analysis, not actual premiums, commissions or predicted insurance CLV. "
+    "The methodology is designed to scale to 50,000+ policyholders."
 )
 
 @st.cache_data
@@ -157,15 +158,26 @@ with st.expander("Methodology and limitations"):
           excluding returned transactions.
         - Churn rate: percentage marked churned in supplied profiles.
 
-        **Limitations**
-        - Sample contains 200 customer profiles, not 50,000 policyholders.
-        - Transactions represent general retail sales.
-        - Insurance premium, commission, claims and renewal measures
-          are unavailable.
+        **Proxy assumptions and limitations**
+        - The 200 customer profiles and 1,000 sales transactions are the
+          intended Cynaris project sample.
+        - Transaction values, product categories and RFM segments are
+          exploratory proxies, not actual insurance premiums, commissions,
+          claims, renewals or predicted insurance CLV.
+        - Fintech records are not joined because verified customer ID
+          mapping is unavailable.
         - Historical monetary value is not predictive CLV.
-        - Five-cluster silhouette score was approximately 0.318,
+        - Five-cluster silhouette score is approximately 0.318,
           below the stated 0.85 target.
-        - Results must not be generalized to the full insurance population.
+
+        **Scalability to 50,000+ policyholders**
+        - Reuse the data validation and feature-engineering pipeline.
+        - Use stable customer and policy identifiers for reliable joins.
+        - Process larger datasets in batches or scheduled pipelines.
+        - Re-evaluate clustering and segment stability at production scale.
+        - Add verified premiums, commissions, renewals and acquisition costs
+          when available.
+        - Benchmark performance on the larger dataset before deployment.
         """
     )
 

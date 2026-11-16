@@ -75,13 +75,26 @@ These are historical transaction values, not forecasts or customer lifetime valu
 
 ## 8. Data Limitations and Acceptance Gaps
 
-- Only 200 customer profiles were supplied, not the 50,000 target.
-- Sales records are not confirmed insurance policy transactions.
+- Cynaris confirmed that the supplied 200 customer profiles are the intended project sample; 50,000+ refers to the production scale the methodology should support.
+- General retail sales values are exploratory proxies for historical customer value and purchasing behaviour, not actual insurance policy transactions.
 - Profile-level Total_Orders and Total_Revenue do not reconcile with transaction-level sales; RFM therefore uses transaction-derived metrics.
 - 42 customer profiles have first-purchase dates later than last-purchase dates; original dates were not silently altered.
 - Fintech user IDs have no verified mapping to customer profile IDs and were excluded from customer-level RFM and cohort calculations.
-- No verified future CLV target or insurance commission outcome is available.
+- No verified future CLV target or insurance commission outcome is available. Transaction values, product categories and segments are proxies only, not actual insurance premiums, commissions or predicted insurance CLV.
 - Five-cluster silhouette is below the stated 85% target.
+
+### Scalability to 50,000+ Policyholders
+
+The current analysis uses the complete supplied sample of 200 customer profiles and 1,000 sales transactions. The methodology can be extended by:
+
+1. Reusing data validation and cleaning on larger datasets.
+2. Using stable customer and policy identifiers for reliable joins.
+3. Processing customer and transaction features in batches.
+4. Re-evaluating clustering and segment stability at production scale.
+5. Incorporating verified premiums, commissions, renewals and acquisition costs when available.
+6. Testing predictive models against suitable historical outcomes.
+
+Production-scale performance on 50,000+ records has not yet been benchmarked.
 
 ## 9. Deliverables
 
@@ -102,4 +115,4 @@ These are historical transaction values, not forecasts or customer lifetime valu
 
 ## Conclusion
 
-Week 6 establishes reproducible sample-level RFM and cohort analyses. The results can guide further investigation and experiment design, but cannot yet validate insurance CLV, the 50,000-customer segmentation target, or the 85% clustering acceptance criterion.
+Week 6 establishes reproducible sample-level RFM and cohort analyses. The results provide sample-level RFM and cohort insights using the intended Cynaris sample. Proxy measures do not establish actual insurance CLV. The five-cluster silhouette remains approximately 0.318, below the stated 0.85 target. Performance on 50,000+ policyholders remains to be tested.
